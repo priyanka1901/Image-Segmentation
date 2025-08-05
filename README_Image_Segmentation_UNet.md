@@ -2,25 +2,14 @@
 
 This project applies deep learning for semantic image segmentation using a U-Net architecture enhanced by **transfer learning**. The objective is to classify each pixel of an image and generate a segmentation map identifying target regions.
 
-> 🔧 Built using PyTorch  
-> 🎯 Trained on a dataset with paired images and binary masks  
-> 📉 Final Validation IoU Score: ~0.54
+> Built using PyTorch  
+> Trained on a dataset with paired images and binary masks  
+> Final Validation IoU Score: ~0.54
+
 
 ---
 
-## 📁 Project Structure
-
-```
-image-segmentation/
-├── gunjan_priyanka29_gmail_com_31_UNET11.ipynb   # Main notebook
-├── README.md
-├── requirements.txt                              # Python dependencies
-└── (data/, scripts/, etc. can be added as needed)
-```
-
----
-
-## 📌 Problem Statement
+## Problem Statement
 
 Given input images and corresponding binary masks, the goal is to segment the object of interest by classifying each pixel in the image.
 
@@ -45,9 +34,9 @@ This project uses a **U-Net model with transfer learning**:
 
 ---
 
-## ⚙️ Training Details
+## Training Details
 
-- **Loss Function**: Binary Cross Entropy with Logits (`BCEWithLogitsLoss`)
+- **Loss Function**: Combined Cross Entropy and Dice Loss (`cce_dice_loss`)
 - **Optimizer**: Adam
 - **Metric**: Intersection over Union (IoU)
 - **Train/Val Split**: 80:20
@@ -55,20 +44,7 @@ This project uses a **U-Net model with transfer learning**:
 
 ---
 
-## 📈 Results
-
-Below are example outputs on the test set:
-
-| Input Image | Ground Truth Mask | Predicted Mask |
-|-------------|-------------------|----------------|
-| ![sample1](link) | ![mask1](link) | ![pred1](link) |
-| _(Add images if available, or remove this table)_ |
-
-Visual inspection shows the model performs reasonably well in identifying the key regions.
-
----
-
-## 📦 Requirements
+## Requirements
 
 Install Python dependencies:
 ```bash
@@ -81,18 +57,14 @@ Main libraries:
 - `numpy`
 - `matplotlib`
 - `PIL`
+- `segmentation_models` (Keras version)
+- `tensorflow`
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
-- Add Dice coefficient and pixel accuracy evaluation
 - Use data augmentation to improve generalization
 - Deploy with a Streamlit or Gradio app for interactive demos
 
 ---
-
-## 👩‍💻 Author
-
-- Priyanka Gunjan  
-  [GitHub](https://github.com/priyanka1901)
