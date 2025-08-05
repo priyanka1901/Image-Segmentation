@@ -1,4 +1,4 @@
-# 🧠 Image Segmentation Using U-Net with Transfer Learning
+# Image Segmentation Using U-Net with Transfer Learning
 
 This project applies deep learning for semantic image segmentation using a U-Net architecture enhanced by **transfer learning**. The objective is to classify each pixel of an image and generate a segmentation map identifying target regions.
 
@@ -15,7 +15,7 @@ Given input images and corresponding binary masks, the goal is to segment the ob
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 - Each sample consists of an image and a corresponding binary segmentation mask.
 - The dataset was split into:
@@ -25,7 +25,7 @@ Given input images and corresponding binary masks, the goal is to segment the ob
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 This project uses a **U-Net model with transfer learning**:
 - The **encoder** is based on a **pretrained convolutional neural network** (e.g., VGG or ResNet).
